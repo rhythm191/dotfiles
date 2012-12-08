@@ -37,10 +37,16 @@ setopt EXTENDED_HISTORY   # zshの開始終了を記録
 # alias
 setopt complete_aliases
 export LSCOLORS=ExFxCxdxBxegedabagacad
-alias ls="ls --color"
+case "${OSTYPE}" in
+freebsd*|darwin*)
+  alias ls="ls -G -w"
+;;
+linux*)
+  alias ls="ls --color"
+;;
+esac
 alias la="ls -a"
 alias lf="ls -F"
 alias ll="ls -l"
-
 alias du="du -h"
-alias af="df -h"
+alias df="df -h"
