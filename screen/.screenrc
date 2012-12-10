@@ -14,6 +14,7 @@ escape ^Tt
 
 # スタートアップはいらない子
 startup_message off
-vbell off
+# vbell で command; bell で下のメッセージ領域を使って知らせてくれる
+vbell on
 caption always  "%{= wb} %-w%{=bu dr}% %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
 bind n screen
