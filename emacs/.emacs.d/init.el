@@ -8,8 +8,14 @@
 	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
+;; package 管理の設定
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 ;; elispとconfディレクトリをｻﾌﾞディレクトリごとload-pathに追加
-(add-to-load-path "elisp" "conf")
+(add-to-load-path "conf")
 
 ;; backupファイルを ~/.emacs.d/backup以下に配置する
 (setq make-backup-files t)
@@ -19,13 +25,13 @@
 (setq delete-auto-save-files t)
 
 ;; (install-elisp)
-(when (require 'auto-install nil t)
+;;(when (require 'auto-install nil t)
   ;; インストールディレクトリを設定
-  (setq auto-install-directory "~/.emacs.d/elisp")
+  ;;(setq auto-install-directory "~/.emacs.d/elisp")
   ;; EmacsWikiに登録されている elispの名前を取得する
-  (auto-install-update-emacswiki-package-name t)
+  ;;(auto-install-update-emacswiki-package-name t)
   ;; install-elisp の関数を利用可能にする
-  (auto-install-compatibility-setup))
+  ;;(auto-install-compatibility-setup))
 
 ;; 文字コードをUTF-8にする
 (set-language-environment "Japanese")

@@ -8,6 +8,10 @@ RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 setopt prompt_subst
 bindkey -e                         # emacsライクなキーバインド
 
+# C-p, C-nを検索つきコマンドヒストリ探索に変更
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-forward
+
 export LANG=ja_JP.UTF-8
 export EDITOR=emacs
 
