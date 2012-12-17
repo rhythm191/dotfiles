@@ -8,14 +8,14 @@
 	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
+;; elispとconfディレクトリをサブディレクトリごとload-pathに追加
+(add-to-load-path "elisp" "conf")
+
 ;; package 管理の設定
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-
-;; elispとconfディレクトリをｻﾌﾞディレクトリごとload-pathに追加
-(add-to-load-path "conf")
 
 ;; backupファイルを ~/.emacs.d/backup以下に配置する
 (setq make-backup-files t)
@@ -23,15 +23,6 @@
   (cons (cons "\\.*$" (expand-file-name "~/.emacs.d/backup"))
     backup-directory-alist))
 (setq delete-auto-save-files t)
-
-;; (install-elisp)
-;;(when (require 'auto-install nil t)
-  ;; インストールディレクトリを設定
-  ;;(setq auto-install-directory "~/.emacs.d/elisp")
-  ;; EmacsWikiに登録されている elispの名前を取得する
-  ;;(auto-install-update-emacswiki-package-name t)
-  ;; install-elisp の関数を利用可能にする
-  ;;(auto-install-compatibility-setup))
 
 ;; 文字コードをUTF-8にする
 (set-language-environment "Japanese")
@@ -47,3 +38,11 @@
 ;; paren-node 対応する括弧を強調して表示
 (setq show-paren-delay 0)
 (show-paren-mode t)
+
+;; タブ幅を調整
+(setq-default tab-width 4)
+(setq default-tab-width 4)
+(setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60
+                      64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
+
+
