@@ -2,6 +2,7 @@
 	name = rhythm191
 	email = maneater.rhythm@gmail.com
 [color]
+	ui = auto
 	status = auto
 	diff = auto
 	branch = auto
@@ -11,6 +12,8 @@
 	co = checkout
 	ci = commit
 	b = branch
+	f = fetch -p
+	m = merge
 	rmb = branch -d
 	rbd = rebase develop
 	ls = log --stat
