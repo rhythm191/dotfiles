@@ -1,0 +1,23 @@
+###
+# TaskPlot model spec
+###
+require ['jquery', 'models/TaskPlot'], ($, TaskPlot) ->
+    describe 'TaskPlot model' ->
+
+        it 'is creatable' ->
+            task = new TaskPlot({
+                label: 'to clean my room'
+                createdAt: 10000000000
+                done: false
+                isProject: false
+                user_id: 1
+                project_id: null
+                plot:
+                  x: 10
+                  y: 10
+                  z: 1
+                  scale: 1
+            })
+
+            expect(task.label).toBe 'to clean my room'
+            expect(task.done).toBeTruthy

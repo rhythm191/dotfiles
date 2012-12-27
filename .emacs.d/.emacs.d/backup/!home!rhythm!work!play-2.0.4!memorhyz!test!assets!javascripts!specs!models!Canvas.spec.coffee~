@@ -1,0 +1,30 @@
+###
+# Canvasモデルのスペック
+###
+require ['jquery', 'models/Canvas'], ($, Canvas) ->
+	describe 'Canvas モデルは', ->
+
+		describe 'シングルトンオブジェクトで', ->
+
+			beforeEach ->
+				Canvas.clearInstance()
+
+			it 'createInstance(stage)で生成する', ->
+				canvas = Canvas.createInstance({stage: 'stage1'})
+
+				expect(canvas.stage).toBe 'stage1'
+
+			it 'getInstance() でオブジェクトを取得する', ->
+				Canvas.createInstance({stage: 'stage1'})
+
+				canvas = Canvas.getInstance()
+
+				expect(canvas.stage).toBe 'stage1'
+
+			it 'clearInstance() でオブジェクトの状態をクリアする', ->
+				Canvas.createInstance({stage: 'stage1'})
+
+				Canvas.clearInstance()
+				canvas = Canvas.getInstance()
+
+				expect(canvas).toBeNull()

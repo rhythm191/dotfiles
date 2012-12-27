@@ -1,0 +1,10 @@
+###
+ 操作パネルを管理するコントローラ
+  
+ @author rhythm
+###
+define ['jquery', 'Kinetic', 'lib/spine', 'models/PlotTask', 'lib/route'], ($, Kinetic, Spine, TaskPlot) ->
+
+	class Tasks extends Spine.Controller
+		constructor: ->
+			super

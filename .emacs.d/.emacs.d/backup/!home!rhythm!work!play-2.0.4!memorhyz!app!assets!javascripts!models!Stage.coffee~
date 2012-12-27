@@ -1,0 +1,9 @@
+###
+# キャンバス全体を管理するモデル
+###
+define ['jquery', 'Kinetic', 'lib/spine'], ($, Kinetic, Spine) ->
+
+	class Stage extends Spine.Model
+		@configure "Stage", "stage"
+
+		

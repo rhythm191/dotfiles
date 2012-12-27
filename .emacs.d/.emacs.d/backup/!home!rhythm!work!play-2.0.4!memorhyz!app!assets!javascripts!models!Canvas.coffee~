@@ -1,0 +1,16 @@
+###
+# キャンバス全体を管理するモデル
+###
+define ['jquery', 'Kinetic', 'lib/spine'], ($, Kinetic, Spine) ->
+
+	class Canvas extends Spine.Model
+		@configure "Canvas", "stage", "taskLayer", "panelLayer"
+
+		@createInstance: (stage) ->
+			@removeAll() if @count() is 0
+			new Canvas({stage: stage})
+
+		@getInstance: ->
+			@first()
+			
+		

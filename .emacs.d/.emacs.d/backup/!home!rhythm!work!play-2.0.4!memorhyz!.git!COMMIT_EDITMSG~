@@ -1,0 +1,20 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch feature10
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   app/assets/javascripts/controllers/Panel.coffee
+#	modified:   app/assets/javascripts/models/Canvas.coffee
+#	modified:   public/javascripts/lib/bootstrap.min.js
+#	modified:   public/javascripts/lib/spine.ajax.js
+#	modified:   public/javascripts/lib/spine.js
+#	modified:   test/assets/javascripts/require.conf.coffee
+#	modified:   test/assets/javascripts/specs/models/Canvas.spec.coffee
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	public/javascripts/lib/jasmine-jquery.js
+#	test/assets/javascripts/mocks/

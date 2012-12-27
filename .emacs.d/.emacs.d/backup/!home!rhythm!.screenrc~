@@ -1,0 +1,20 @@
+# screen の状態を保存する
+autodetach on
+
+# 文字コードの設定
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+
+
+defscrollback 10000
+
+# プレフィックスは Ctrl + t
+escape ^Tt
+
+# スタートアップはいらない子
+startup_message off
+# vbell で command; bell で下のメッセージ領域を使って知らせてくれる
+vbell on
+caption always  "%{= wb} %-w%{=bu dr}% %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
+bind n screen

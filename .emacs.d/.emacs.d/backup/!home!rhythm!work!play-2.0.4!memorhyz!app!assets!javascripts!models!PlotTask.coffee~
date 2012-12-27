@@ -1,0 +1,41 @@
+###
+ PlotTaskに関するモデル
+###
+define ['jquery', 'lib/spine', 'lib/ajax'], ($, Spine) ->
+
+	class PlotTask extends Spine.Model
+		@configure "Task", "label", "createdAt", "done", "isProject", "user_id", "project_id", "plot"
+
+		@extend Spine.Model.Ajax
+
+		@url: "/plottasks"
+
+		updateTranslate: (x, y) ->
+			tmpPlot = @plot
+			tmpPlot.x = x
+			tmpPlot.y = y
+			@plot = tmpPlot
+			$.post("/plot/translate/#{@id}/#{@plot.x}/#{@plot.y}") 
+
+
+		@active: ->
+			@select (item) -> !item.done
+
+		@done: ->
+			@select (item) -> !!item.done
+
+		@destroyDone: ->
+			rec.destroy() for rec in @done()
+
+		@allActive: ->
+			rec.trigger("active") for rec in @all()
+
+		@filter: (query) ->
+			@select (item) -> item.label.indexOf(query) isnt -1
+
+		@unfilter: (query) ->
+			@select (item) -> item.label.indexOf(query) is -1
+
+		@selection: (query) ->
+			rec.trigger("active") for rec in @filter(query)
+			rec.trigger("inactive") for rec in @unfilter(query)
