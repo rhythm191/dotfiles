@@ -15,6 +15,8 @@
 	m = merge
 	rmb = branch -d
 	rbd = rebase develop
+	s = status
+	ss = status -s
 	ls = log --stat
 	lp = log -p
 	la = log --pretty=\"format:%h %ad (%an): %s\" --date=short
