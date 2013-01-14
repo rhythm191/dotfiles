@@ -57,6 +57,7 @@ alias df="df -h"
 
 # rubyの設定
 alias r="rails"
-export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init - zsh)"
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
