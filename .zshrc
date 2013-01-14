@@ -54,3 +54,9 @@ alias lf="ls -F"
 alias ll="ls -l"
 alias du="du -h"
 alias df="df -h"
+
+# rubyの設定
+alias r="rails"
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init - zsh)"
+
