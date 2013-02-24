@@ -1,0 +1,17 @@
+### linux専用設定
+
+
+
+
+# Terminal Colorの設定
+setopt complete_aliases
+export LSCOLORS=ExFxCxdxBxegedabagacad
+
+## alias
+alias ls="ls --color"
+
+# man path
+MANPATH=/usr/local/man:$MANPATH
+export MANPATH
+INFOPATH=/usr/local/info:$INFOPATH
+export INFOPATH

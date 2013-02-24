@@ -46,3 +46,5 @@
                       64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
 
 
+
+(put 'upcase-region 'disabled nil)

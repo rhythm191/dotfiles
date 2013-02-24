@@ -1,0 +1,29 @@
+### mac 専用設定
+
+## PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+
+## Terminal Colorの設定
+setopt complete_aliases
+export LSCOLORS=ExFxCxdxBxegedabagacad
+
+alias ls="ls -G -w"
+
+## Java7
+# デフォルトエンコーディングSJISをUTF-8へ
+export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
+
+
+## Node
+export NODE_PATH=/usr/local/lib/node:/usr/local/share/npm/lib/node_modules
+
+## rbenv
+export RBENV_ROOT=/usr/local/opt/rbenv
+
+
+# man path
+MANPATH=/usr/local/man:$MANPATH
+export MANPATH
+INFOPATH=/usr/local/info:$INFOPATH
+export INFOPATH

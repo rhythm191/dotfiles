@@ -13,23 +13,33 @@ bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 
 export LANG=ja_JP.UTF-8
-export EDITOR=emacs
+export EDITOR="emacs -nw"
 
 # ビープ音を消す
 setopt nolistbeep
 
-# 補完機能
+
+
+## 補完機能
 autoload -U compinit
 compinit -u
+setopt correct           # 正しいコマンドを提示してくれる
+setopt auto_list         # 補完候補が複数ある時に、一覧表示する
+setopt magic_equal_subst # コマンドラインの引数で --prefix=/usr などの = 以降でも補完できる
+setopt brace_ccl         # {a-c} を a b c に展開する機能を使えるようにする
+setopt auto_param_slash  # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
+# sudoも補完の対象
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-# 正しいコマンドを提示してくれる
-setopt correct
 
-# cdの履歴を表示
-setopt autocd
-setopt autopushd
+## cd
+setopt auto_cd           # 指定したコマンド名がなく、ディレクトリ名と一致した場合 cd する
+setopt auto_pushd        # cd でTabを押すとdir list を表示
+setopt pushd_ignore_dups # ディレクトリスタックに同じディレクトリを追加しないようになる
 
-# history関係
+
+
+## history関係
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -38,26 +48,32 @@ setopt hist_reduce_blanks # スペース排除
 setopt share_history      # 履歴ファイルを共有
 setopt EXTENDED_HISTORY   # zshの開始終了を記録
 
-# alias
-setopt complete_aliases
-export LSCOLORS=ExFxCxdxBxegedabagacad
-case "${OSTYPE}" in
-freebsd*|darwin*)
-  alias ls="ls -G -w"
-;;
-linux*)
-  alias ls="ls --color"
-;;
-esac
-alias la="ls -a"
-alias lf="ls -F"
-alias ll="ls -l"
-alias du="du -h"
-alias df="df -h"
+
+
+# C-M-h でチートシートを表示する
+cheat-sheet () { zle -M "`cat ~/dotfiles/.zsh/cheat-sheet`" }
+zle -N cheat-sheet
+
 
 # rubyの設定
-alias r="rails"
 eval "$(rbenv init - zsh)"
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+
+## alias設定
+#
+[ -f ~/config/.zshrc.alias ] && source ~/config/.zshrc.alias
+
+case "${OSTYPE}" in
+# Mac(Unix)
+darwin*)
+    # ここに設定
+    [ -f ~/config/.zshrc.osx ] && source ~/config/.zshrc.osx
+    ;;
+# Linux
+linux*)
+    # ここに設定
+    [ -f ~/config/.zshrc.linux ] && source ~/config/.zshrc.linux
+    ;;
+esac
 
