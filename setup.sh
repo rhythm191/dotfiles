@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DOT_FILES=( .zshrc .zshenv .emacs.d .gitconfig .screenrc)
+DOT_FILES=( .bashrc .zshrc .zshenv .emacs.d .gitconfig .screenrc)
 
 for file in ${DOT_FILES[@]}
 do
-ln -s $HOME/config/$file $HOME/$file
+ln -s $HOME/dotfiles/$file $HOME/$file
 done
