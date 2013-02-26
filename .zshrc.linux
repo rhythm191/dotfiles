@@ -12,7 +12,7 @@ alias ls="ls --color"
 
 # rbenv
 export RBENV_ROOT="/usr/local/rbenv"
-export PATH=$RBENV_ROOT/bin:$PATH
+export PATH=/usr/local/rbenv/bin:$PATH
 which rbenv > /dev/null 2>&1 && eval "$(rbenv init - zsh)"
 
 # man path
