@@ -55,25 +55,20 @@ cheat-sheet () { zle -M "`cat ~/dotfiles/.zsh/cheat-sheet`" }
 zle -N cheat-sheet
 
 
-# rubyの設定
-eval "$(rbenv init - zsh)"
-
-
-
 ## alias設定
 #
-[ -f ~/config/.zshrc.alias ] && source ~/config/.zshrc.alias
+[ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
 
 case "${OSTYPE}" in
 # Mac(Unix)
 darwin*)
     # ここに設定
-    [ -f ~/config/.zshrc.osx ] && source ~/config/.zshrc.osx
+    [ -f ~/dotfiles/.zshrc.osx ] && source ~/dotfiles/.zshrc.osx
     ;;
 # Linux
 linux*)
     # ここに設定
-    [ -f ~/config/.zshrc.linux ] && source ~/config/.zshrc.linux
+    [ -f ~/dotfiles/.zshrc.linux ] && source ~/dotfiles/.zshrc.linux
     ;;
 esac
 

@@ -10,6 +10,9 @@ alias du="du -h"
 alias df="df -h"
 alias duh="du -h ./ --max-depth=1"
 
+# ln -s
+alias lns="ln -s"
+
 # grep
 alias 'gr'='grep --color=auto -ERUIn'
 
@@ -50,4 +53,4 @@ extract () {
       echo "'$1' is not a valid file!"
   fi
 }
-alias ex='extract'
+alias ext='extract'
