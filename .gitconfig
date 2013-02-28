@@ -10,11 +10,14 @@
 [alias]
 	co = checkout
 	ci = commit
+	a = add .
 	b = branch
 	f = fetch -p
 	m = merge
 	rmb = branch -d
-	rbd = rebase develop
+	rb = rebase
+	pl = pull
+	ph = push
 	s = status
 	ss = status -s
 	ls = log --stat
