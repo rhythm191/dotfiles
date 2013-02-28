@@ -1,20 +1,34 @@
 # PROMPT
 autoload colors
 colors
-PROMPT="[%n@%m]%(!.#.$) "
-PROMPT2="_> "
-SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 
 # vcsの設定をする
 autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' formats '(%s)-[%b]'
 zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+zstyle ':vcs_info:svn:*' formats 's)[%b]'
+zstyle ':vcs_info:svn:*' actionformats 's)[%b|%a]'
 precmd () {
     psvar=()
     LANG=en_US.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
+autoload -Uz is-at-least
+if is-at-least 4.3.10; then
+  # この check-for-changes が今回の設定するところ
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' stagedstr "+"    # 適当な文字列に変更する
+  zstyle ':vcs_info:git:*' unstagedstr "?"  # 適当の文字列に変更する
+  zstyle ':vcs_info:git:*' formats 'g)[%b] %c%u'
+  zstyle ':vcs_info:git:*' actionformats 'g)[%b|%a] %c%u'
+fi
+
+
+PROMPT="[%n@%m]%(!.#.$) "
+PROMPT2="_> "
+SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%1(v|%F{green}%1v%f|) %{${fg[blue]}%}[%~]%{${reset_color}%}"
 setopt prompt_subst
 bindkey -e                         # emacsライクなキーバインド
