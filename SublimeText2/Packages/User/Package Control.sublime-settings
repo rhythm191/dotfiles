@@ -1,0 +1,27 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AutoFileName",
+		"BracketHighlighter",
+		"CoffeeScript",
+		"ColorPick",
+		"CSS Snippets",
+		"CSSFormat",
+		"Emmet",
+		"Git",
+		"Goto-CSS-Declaration",
+		"HTML5",
+		"jQuery",
+		"JsBDD",
+		"LESS",
+		"Package Control",
+		"Play 2.0",
+		"Sass",
+		"Scalariform",
+		"SCSS",
+		"SideBarGit",
+		"SublimeLinter",
+		"Tag"
+	]
+}
