@@ -8,6 +8,8 @@
 	interactive = auto
 	grep = auto
 	autocrlf = false
+[push]
+	default = simple
 [alias]
 	co = checkout
 	ci = commit
