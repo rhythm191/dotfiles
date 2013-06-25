@@ -27,6 +27,7 @@ alias r="rails"
 alias -g RET="RAILS_ENV=test"
 alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
+alias be="bundle exec"
 
 
 # extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
