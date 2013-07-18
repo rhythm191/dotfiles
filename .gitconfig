@@ -13,12 +13,15 @@
 [alias]
 	co = checkout
 	ci = commit
+	cia = commit --amend
 	a = add .
 	b = branch
 	f = fetch -p
 	m = merge
+	ms = merge --squash
 	rmb = branch -d
 	rb = rebase
+	rh = reset --hard
 	pl = pull
 	ph = push
 	s = status
