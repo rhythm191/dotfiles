@@ -38,7 +38,7 @@ bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 
 export LANG=ja_JP.UTF-8
-export EDITOR="emacs -nw"
+export EDITOR="vim"
 
 # ビープ音を消す
 setopt nolistbeep
