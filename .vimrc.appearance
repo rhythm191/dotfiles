@@ -1,0 +1,22 @@
+" 表示周りとか色とかを定義
+
+set showmatch " 括弧の対応をハイライト
+set number " 行番号は表示
+
+" color
+if !has('gui_running')
+  set t_Co=256
+endif
+
+" color schema
+let g:molokai_original = 1
+colorscheme molokai
+set background=dark
+
+" カレントウィンドウにのみ罫線を引く
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+augroup END
+

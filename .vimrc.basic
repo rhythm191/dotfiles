@@ -1,21 +1,7 @@
 " vim basic setting
 
-" visible line number
-set number
-
-" color
-if !has('gui_running')
-  set t_Co=256
-endif
-
-" color schema
-let g:molokai_original = 1
-colorscheme molokai
-set background=dark
-
+set vb t_vb= " ビープをならさない
 
 " encoding setting
 scriptencoding utf-8
 set encoding=utf-8
-
-" set guifont=Ricty\ 10

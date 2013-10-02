@@ -3,30 +3,3 @@
 " タブ常に表示
 set showtabline=2
 
-set tabline=%!MyTabLine()
-function! MyTabLine()
-  let s = ''
-  for i in range(tabpagenr('$'))
-" select the highlighting
-    if i + 1 == tabpagenr()
-      let s .= '%#TabLineSel#'
-    else
-      let s .= '%#TabLine#'
-    endif
-    let s .= '%' . (i + 1) . 'T'
-    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
-  endfor
-  let s .= '%#TabLineFill#%T'
-  let s .= '%=%{fugitive#statusline()} ' . fnamemodify(getcwd(), ":~")
-  return s
-endfunction
-
-function! MyTabLabel(n)
-  let buflist = tabpagebuflist(a:n)
-  let winnr = tabpagewinnr(a:n)
-  let bufname = fnamemodify(bufname(buflist[winnr - 1]), ':t')
-
-  let label = a:n . ": "
-  let label .= bufname == '' ? 'No name' : bufname
-  return label
-endfunction
