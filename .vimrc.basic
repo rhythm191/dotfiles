@@ -1,0 +1,10 @@
+" vim basic setting
+
+" visible line number
+set number
+
+" encoding setting
+scriptencoding utf-8
+set encoding=utf-8
+
+set guifont=Ricty\ 10
