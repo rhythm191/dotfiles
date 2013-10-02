@@ -20,6 +20,9 @@ NeoBundle 'Shougo/vimproc', {
 "NeoBundle 'VimClojure'
 "NeoBundle 'Shougo/vimshell'
 
+" vim color schema
+NeoBundle 'tomasr/molokai'
+
 " anything for vim
 NeoBundle 'Shougo/unite.vim'
 

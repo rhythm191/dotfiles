@@ -8,6 +8,11 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+" color schema
+let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
+
 " encoding setting
 scriptencoding utf-8
 set encoding=utf-8
