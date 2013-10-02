@@ -3,8 +3,13 @@
 " visible line number
 set number
 
+" color
+if !has('gui_running')
+  set t_Co=256
+endif
+
 " encoding setting
 scriptencoding utf-8
 set encoding=utf-8
 
-set guifont=Ricty\ 10
+" set guifont=Ricty\ 10
