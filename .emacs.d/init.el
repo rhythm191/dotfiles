@@ -75,11 +75,23 @@
 (put 'upcase-region 'disabled nil)
 
 
-
 ;; helmの設定
 (require 'helm-config)
+(require 'helm-descbinds)
+(helm-mode 1)
 (helm-descbinds-mode)
 ;; C-x b で helm-for-files
+(define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "C-x b") 'helm-for-files)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-c h") 'helm-mini)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+
+;; helm-find-file ではTABでファイル名をそのまま補完する(TABの代わりはC-;
+;(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+;(define-key helm-find-files-map (kbd "C-;") 'helm-select-action)
+;; TAB押した場合にファイルが存在しない場合は何もしない
+;(defadvice helm-ff-kill-or-find-buffer-fname (around execute-only-if-exist activate)
+;  "Execute command only if CANDIDATE exists"
+;  (when (file-exists-p candidate)
+;    ad-do-it))
