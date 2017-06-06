@@ -6,6 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 ### alias
+alias ll='ls -l'
 alias la='ls -a'
 alias lf='ls -F'
 
