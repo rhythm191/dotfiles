@@ -29,7 +29,7 @@ fi
 PROMPT="[%n@%m]%(!.#.$) "
 PROMPT2="_> "
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%1(v|%F{green}%1v%f|) %{${fg[blue]}%}[%~]%{${reset_color}%}"
+RPROMPT="%1(v|%F{green}%1v%f|) %{${fg[cyan]}%}[%~]%{${reset_color}%}"
 setopt prompt_subst
 bindkey -e                         # emacsライクなキーバインド
 
