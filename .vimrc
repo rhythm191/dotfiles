@@ -4,16 +4,16 @@
 set nocompatible
 
 " setting bundle
-source ~/dotfiles/.vimrc.bundle
+" source ~/dotfiles/.vimrc.bundle
 
 " setting basic
-source ~/dotfiles/.vimrc.basic
+"source ~/dotfiles/.vimrc.basic
 
 " setting appearance
-source ~/dotfiles/.vimrc.appearance
+" source ~/dotfiles/.vimrc.appearance
 
 " tab
-source ~/dotfiles/.vimrc.tab
+" source ~/dotfiles/.vimrc.tab
 
 " status line
-source ~/dotfiles/.vimrc.status
+" source ~/dotfiles/.vimrc.status

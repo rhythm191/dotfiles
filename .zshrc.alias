@@ -19,9 +19,6 @@ alias 'gr'='grep --color=auto -ERUIn'
 # git
 alias g='git'
 
-# emacs
-alias emacs="emacs -nw"
-
 # rails
 alias r="rails"
 alias -g RET="RAILS_ENV=test"
@@ -29,6 +26,10 @@ alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 alias be="bundle exec"
 
+# docker
+alias d="docker"
+alias dcc="docker-compose"
+alias dcd="docker-compose -f docker-compose-develop.yml"
 
 # extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
 extract () {

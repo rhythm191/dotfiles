@@ -55,6 +55,8 @@ setopt brace_ccl         # {a-c} を a b c に展開する機能を使えるよ�
 setopt auto_param_slash  # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 # sudoも補完の対象
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+# git alias g
+compdef g='git'
 
 
 ## cd
@@ -79,6 +81,8 @@ setopt EXTENDED_HISTORY   # zshの開始終了を記録
 cheat-sheet () { zle -M "`cat ~/dotfiles/.zsh/cheat-sheet`" }
 zle -N cheat-sheet
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 ## alias設定
 #
