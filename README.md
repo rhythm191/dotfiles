@@ -4,8 +4,9 @@ Installation
 Prerequisites
 -------------
 
+* bash
+* zsh
 * Git (1.8+ recommended)
-* Emacs (24+ recommended)
 * screen
 * tmux
 
