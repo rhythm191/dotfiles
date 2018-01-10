@@ -56,3 +56,15 @@ extract () {
   fi
 }
 alias ext='extract'
+
+imageopt () {
+  cat $1 | imagemin \
+    --plugin=mozjpeg \
+    --plugin=gifsicle \
+    --plugin=pngquant \
+    --plugin=optipng \
+    --plugin=svgo > ${1}.new
+  mv -f ${1}.new $1
+}
+
+alias imageopt='imageopt'

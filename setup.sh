@@ -6,3 +6,5 @@ for file in ${DOT_FILES[@]}
 do
   ln -sf $HOME/dotfiles/$file $HOME
 done
+
+npm i -g imagemin-cli imagemin-mozjpeg imagemin-gifsicle imagemin-pngquant imagemin-optipng imagemin-svgo
