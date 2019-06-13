@@ -25,11 +25,26 @@ if is-at-least 4.3.10; then
   zstyle ':vcs_info:git:*' actionformats 'g)[%b|%a] %c%u'
 fi
 
+function _git_not_pushed()
+{
+  if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]; then
+    head="$(git rev-parse HEAD)"
+    for x in $(git rev-parse --remotes)
+    do
+      if [ "$head" = "$x" ]; then
+        return 0
+      fi
+    done
+    echo "_^_"
+  fi
+  return 0
+}
+
 
 PROMPT="[%n@%m]%(!.#.$) "
 PROMPT2="_> "
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%1(v|%F{green}%1v%f|) %{${fg[cyan]}%}[%~]%{${reset_color}%}"
+RPROMPT="%1(v|%F{green}%1v%f|)${vcs_info_git_pushed} %{${fg[cyan]}%}[%~]%{${reset_color}%}"
 setopt prompt_subst
 bindkey -e                         # emacsライクなキーバインド
 

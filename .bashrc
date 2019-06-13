@@ -21,4 +21,13 @@ fi
 
 
 # User specific aliases and functions
+imageopt () {
+  cat $1 | imagemin \
+    --plugin=mozjpeg \
+    --plugin=gifsicle \
+    --plugin=pngquant \
+    --plugin=optipng \
+    --plugin=svgo > ${1}.new
+  mv -f ${1}.new $1
+}
 
