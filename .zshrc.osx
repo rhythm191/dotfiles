@@ -17,7 +17,7 @@ export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 ## ndenv(node)
 export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
+eval "$(nodenv init -)"
 
 ## rbenv
 export RBENV_ROOT=/usr/local/opt/rbenv
