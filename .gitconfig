@@ -1,5 +1,8 @@
 [include]
 	path = ~/.gitconfig.local
+[user]
+        name = rhythm191
+        email = sac2ndg+develop@gmail.com
 [color]
 	ui = auto
 	status = auto
