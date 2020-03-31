@@ -118,4 +118,3 @@ esac
 
 # local専用設定を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
