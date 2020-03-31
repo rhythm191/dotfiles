@@ -10,9 +10,10 @@ export LSCOLORS=ExFxCxdxBxegedabagacad
 
 alias ls="ls -G -w"
 
-## Java7
+## Java
 # デフォルトエンコーディングSJISをUTF-8へ
 export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 
 ## nodenv(node)
