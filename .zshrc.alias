@@ -57,7 +57,7 @@ extract () {
 }
 alias ext='extract'
 
-imageopt () {
+imageopti () {
   cat $1 | imagemin \
     --plugin=mozjpeg \
     --plugin=gifsicle \
@@ -67,4 +67,4 @@ imageopt () {
   mv -f ${1}.new $1
 }
 
-alias imageopt='imageopt'
+alias imageopt='imageopti'
