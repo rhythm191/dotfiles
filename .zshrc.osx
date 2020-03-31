@@ -15,8 +15,7 @@ alias ls="ls -G -w"
 export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 
-## ndenv(node)
-export PATH="$HOME/.ndenv/bin:$PATH"
+## nodenv(node)
 eval "$(nodenv init -)"
 
 ## rbenv
