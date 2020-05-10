@@ -31,6 +31,9 @@ alias d="docker"
 alias dcc="docker-compose"
 alias dcd="docker-compose -f docker-compose-develop.yml"
 
+# kubernetes
+alias kube="kubectl"
+
 # extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
 extract () {
   if [ -f $1 ] ; then
