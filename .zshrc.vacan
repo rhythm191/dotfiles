@@ -1,0 +1,9 @@
+
+
+# sshuttle
+alias sdev='ssh dev'
+alias sprod='ssh prod'
+alias ssdev='sshuttle -vr dev 172.16.0.0/16'
+alias ssprod='sshuttle -vr prod 10.0.0.0/8'
+alias sstg='ssh stg'
+alias ssstg='sshuttle -vr stg 10.0.0.0/8'
