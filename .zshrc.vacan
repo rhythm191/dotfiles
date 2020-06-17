@@ -1,9 +1,10 @@
 
 
 # sshuttle
-alias sdev='ssh dev'
-alias sprod='ssh prod'
-alias ssdev='sshuttle -vr dev 172.16.0.0/16'
-alias ssprod='sshuttle -vr prod 10.0.0.0/8'
-alias sstg='ssh stg'
-alias ssstg='sshuttle -vr stg 10.0.0.0/8'
+alias sdev='ssh vacan_dev'
+alias sprod='ssh vacan_prod'
+alias ssdev='sshuttle -vr vacan_dev 172.16.0.0/16'
+alias ssprod='sshuttle -vr vacan_prod 10.0.0.0/8'
+alias sstg='ssh vacan_stg'
+alias ssstg='sshuttle -vr vacan_stg 10.0.0.0/8'
+alias ssqa='sshuttle -vr ec2-user@18.178.152.139 0/0 --ssh-cmd "ssh -i ~/.ssh/qa1-vacan.pem"'

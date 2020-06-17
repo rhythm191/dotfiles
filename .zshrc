@@ -117,7 +117,7 @@ linux*)
 esac
 
 # vacan専用設定を読み込む
-[ -f ~/.zshrc.vacan ] && source ~/.zshrc.vacan
+[ -f ~/dotfiles/.zshrc.vacan ] && source ~/dotfiles/.zshrc.vacan
 
 # local専用設定を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
