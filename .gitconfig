@@ -13,6 +13,8 @@
 	autocrlf = false
 [push]
 	default = current
+[pull]
+	ff = only
 [alias]
 	co = checkout
 	ci = commit
