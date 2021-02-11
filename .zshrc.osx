@@ -35,11 +35,6 @@ export MANPATH
 INFOPATH=/usr/local/info:$INFOPATH
 export INFOPATH
 
-# kubernetes command completion
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
-
 # pyenv
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d "${PYENV_ROOT}" ]; then
@@ -50,6 +45,12 @@ fi
 # docker buildkit
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
+
+# kubernetes command completion
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+  complete -o default -F __start_kubectl kube
+fi
 
 # terraform
 autoload -U +X bashcompinit && bashcompinit
