@@ -26,6 +26,9 @@ alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 alias be="bundle exec"
 
+# python
+alias py="python"
+
 # docker
 alias d="docker"
 alias dcc="docker-compose"
