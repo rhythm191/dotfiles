@@ -46,7 +46,7 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 # kubernetes command completion
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
-  complete -o default -F __start_kubectl kube
+  compdef __start_kubectl kube
 fi
 
 # terraform
