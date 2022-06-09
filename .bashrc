@@ -31,3 +31,4 @@ imageopt () {
   mv -f ${1}.new $1
 }
 
+. "$HOME/.cargo/env"
