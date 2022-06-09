@@ -61,3 +61,5 @@
 	trustExitCode = true
 [core]
 	excludesfile = /Users/rhythm191/.gitignore_global
+[init]
+	defaultBranch = main
