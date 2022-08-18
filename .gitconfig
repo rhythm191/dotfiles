@@ -60,6 +60,6 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [core]
-	excludesfile = /Users/rhythm191/.gitignore_global
+	excludesFile = ~/dotfiles/.gitignore_global
 [init]
 	defaultBranch = main
